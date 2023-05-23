@@ -1,0 +1,9 @@
+...
+
+[Service]
+Environment=NODE_PORT=2605
+Type=simple
+Restart=on-failure
+ExecStart=npm start
+
+...
