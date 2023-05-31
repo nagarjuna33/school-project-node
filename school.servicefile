@@ -1,0 +1,21 @@
+[Unit]
+Description=MyApp
+After=syslog.target network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+WorkingDirectory=/home/ubuntu/school-project-node
+ExecStart=npm start
+Environment=NODE_ENV=development
+User=root
+Group=root
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=MyApp
+
+[Install]
+WantedBy=multi-user.target
+~                         
